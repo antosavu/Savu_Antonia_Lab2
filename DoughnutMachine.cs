@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -41,13 +42,13 @@ namespace Savu_Antonia_Lab2
         public event DoughnutCompleteDelegate DoughnutComplete;
 
         DispatcherTimer doughnutTimer;
-        {
+        
             private void InitializeComponent()
-            {
-                this.doughnutTimer = new DispatcherTimer();
-                this.doughnutTimer.Tick += new System.EventHandler(this.doughnutTimer_Tick);
-            }
-
+        {
+            this.doughnutTimer = new DispatcherTimer();
+            this.doughnutTimer.Tick += new System.EventHandler(this.doughnutTimer_Tick);
+        }
+        
         public DoughnutMachine()
         {
             InitializeComponent();
@@ -92,7 +93,7 @@ namespace Savu_Antonia_Lab2
 
 
     }
-    }
+    
     public enum DoughnutType
     {
         Glazed,
